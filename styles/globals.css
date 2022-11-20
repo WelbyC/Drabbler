@@ -1,0 +1,141 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(194, 194, 194, 0.418);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 156, 156, 0.418);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
+  list-style-type: none;
+}
+
+button.delete_button {
+  opacity: 0;
+  transition: opacity 200ms linear, color 400ms ease-in-out;
+}
+
+.button_box:hover .delete_button {
+  opacity: 0.8;
+}
+
+button.shake {
+  color: rgba(119, 119, 119, 0.8);
+  animation: shake .15s;
+}
+
+@keyframes shake {
+0%  { transform: translate(2px, 1px)   rotate(0deg);  }
+10% { transform: translate(-1px, -2px) rotate(-2deg); }
+20% { transform: translate(-3px, 0px)  rotate(3deg);  }
+30% { transform: translate(0px, 2px)   rotate(0deg);  }
+40% { transform: translate(1px, -1px)  rotate(1deg);  }
+50% { transform: translate(-1px, 2px)  rotate(-1deg); }
+60% { transform: translate(-3px, 1px)  rotate(0deg);  }
+70% { transform: translate(2px, 1px)   rotate(-2deg); }
+80% { transform: translate(-1px, -1px) rotate(4deg);  }
+90% { transform: translate(2px, 2px)   rotate(0deg);  }
+100%{ transform: translate(1px, -2px)  rotate(-1deg); }
+}
+
+.goal_box {
+  height: 100px;
+  transition: opacity .250s linear;
+}
+
+.goal_box.at_top {
+  opacity: 1;
+  margin-bottom: 15px;
+}
+
+.goal_box.not_at_top {
+  opacity: 1;
+  position: fixed;
+  top: 8%;
+  left: 2%;
+}
+
+.goal_box.transition {
+  opacity: 0;
+}
+
+
+p.at_top_text {
+  display: inline;
+  font-size: 28px;
+}
+
+p.not_at_top_text {
+  font-size: 14px;
+}
+
+p.at_top_count {
+  display: inline;
+  font-size: 48px;
+}
+
+p.not_at_top_count {
+  font-size: 30px;
+}
+
+.at_top_input input {
+  width: 4ch;
+  font-size: 48px;
+  text-align: center;
+}
+
+.not_at_top_input input {
+  width: 4ch;
+  font-size: 30px;
+  text-align: center;
+}
+
+div.not_at_top_input {
+  margin-bottom: 10px;
+}
+
+.menu_icon {
+  transition: 110ms linear;
+}
+
+.menu_wrapper:hover .menu_icon {
+  opacity: 0;
+}
+
+.menu_wrapper:hover .menu {
+  transform: translateX(-110px);
+}
